@@ -21,17 +21,14 @@ const ListScreen1 = ()=>{
             data={friends}
             renderItem={({item})=>{
                 return(
-                <Text style={styles.textFont}>{`${item.name} - Age ${item.age}`}</Text>
+                <Text style={styles.textFont}> 
+                    {item.name} - Age {item.age}
+                </Text>
                 )
-            }}
-        
+            }}        
         >
-
         </FlatList>
     )
-
-
-
 }
 
 
