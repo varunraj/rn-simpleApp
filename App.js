@@ -7,7 +7,7 @@ import ListScreen from './src/screens/ListScreen'
 import ListScreen1 from './src/screens/ListScreen1'
 import ImageScreen from './src/screens/ImageScreen'
 import CounterScreen from './src/screens/CounterScreen'
-
+import MultipleCounters from './src/screens/MultipleCounters'
 
 const navigator = createStackNavigator(
   {
@@ -17,7 +17,8 @@ const navigator = createStackNavigator(
     List:ListScreen,
     List1:ListScreen1,
     Image:ImageScreen,
-    Counter: CounterScreen
+    Counter: CounterScreen,
+    MultipleCounters: MultipleCounters
   },
   {
     initialRouteName: "Home",

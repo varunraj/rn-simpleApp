@@ -42,6 +42,15 @@ const HomeScreen = (props) => {
           }}
         />
 
+                
+        <Button 
+          title="Go to Multiple Counters"
+          onPress={( )=>{
+            //console.log("Button Pressed")
+            props.navigation.navigate('MultipleCounters') // string passed is same as from home screen route names        
+          }}
+        />
+
         <TouchableOpacity   // Advance features than simple button !
           onPress={()=> props.navigation.navigate('List')}
         >
