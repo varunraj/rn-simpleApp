@@ -59,6 +59,14 @@ const HomeScreen = (props) => {
           }}
         />
 
+
+        <Button 
+          title="Go to Square Demo"
+          onPress={( )=>{
+            //console.log("Button Pressed")
+            props.navigation.navigate('Square') // string passed is same as from home screen route names        
+          }}
+        />
         <TouchableOpacity   // Advance features than simple button !
           onPress={()=> props.navigation.navigate('List')}
         >
