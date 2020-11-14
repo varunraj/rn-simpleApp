@@ -15,7 +15,11 @@ const ColorCounter = ({color, setColor, value}) =>{
             />
             <Button 
                 title={`Decrease ${color}`}
-                onPress={()=>{setColor(value - COLOR_INCREMENT)}}
+                onPress={()=>{
+                    if (value - COLOR_INCREMENT > 0) 
+                        setColor(value - COLOR_INCREMENT)
+                    }
+                }
             />
         </View>
     )
