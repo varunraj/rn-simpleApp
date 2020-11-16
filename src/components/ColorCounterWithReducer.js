@@ -3,7 +3,7 @@ import {View, Text, StyleSheet, Button} from 'react-native'
 
 const COLOR_INCREMENT = 20
 
-const ColorCounter = ({color, setColor, value}) =>{
+const ColorCounter = ({color, dispatch, value}) =>{
 
     
     return(
@@ -11,13 +11,17 @@ const ColorCounter = ({color, setColor, value}) =>{
             <Text>{color}</Text>
             <Button 
                 title={`Increase ${color}`}
-                onPress={()=>{setColor(value + COLOR_INCREMENT)}}
+                onPress={()=>{
+                    if (value + COLOR_INCREMENT < 255)
+                        dispatch({colorToChange:color, amount:COLOR_INCREMENT})
+                    }
+                }
             />
             <Button 
                 title={`Decrease ${color}`}
                 onPress={()=>{
                     if (value - COLOR_INCREMENT > 0) // dont set negative value
-                        setColor(value - COLOR_INCREMENT)
+                       dispatch({colorToChange:color, amount:-COLOR_INCREMENT})
                     }
                 }
             />
