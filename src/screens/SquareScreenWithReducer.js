@@ -6,15 +6,15 @@ import ColorCounter from '../components/ColorCounterWithReducer';
 // state is current state. action is the act performed on state to change it.
 const reducer = (state,action)=>{
     // state === {red"number, green:number, blue:number}
-    //action === {colorToChange : 'red'||'blue'||'green', amount: 15 || -15}
+    //action === {type : 'chnage_red'||'change_blue'||'change_green', payload: 15 || -15}
 
-    switch(action.colorToChange){
-        case 'Red':
-            return {...state, Red:state.Red + action.amount} // duplicate state and update red                 
-        case 'Green':
-            return {...state, Green:state.Green + action.amount}
-        case 'Blue' :
-            return {...state, Blue:state.Blue + action.amount}
+    switch(action.type){
+        case 'change_Red':
+            return {...state, Red:state.Red + action.payload} // duplicate state and update red                 
+        case 'change_Green':
+            return {...state, Green:state.Green + action.payload}
+        case 'change_Blue' :
+            return {...state, Blue:state.Blue + action.payload}
         default:
             return state;
     }

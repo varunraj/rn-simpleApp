@@ -44,6 +44,16 @@ const HomeScreen = (props) => {
 
                 
         <Button 
+          title="Go to Counter1"
+          onPress={( )=>{
+            //console.log("Button Pressed")
+            props.navigation.navigate('Counter1') // string passed is same as from home screen route names        
+          }}
+        />
+
+
+                
+        <Button 
           title="Go to Multiple Counters"
           onPress={( )=>{
             //console.log("Button Pressed")
@@ -75,6 +85,25 @@ const HomeScreen = (props) => {
             props.navigation.navigate('Square1') // string passed is same as from home screen route names        
           }}
         />
+
+      <Button 
+          title="Go to Text Demo"
+          onPress={( )=>{
+            //console.log("Button Pressed")
+            props.navigation.navigate('Text') // string passed is same as from home screen route names        
+          }}
+        />
+
+        <Button 
+          title="Go to Box Demo"
+          onPress={( )=>{
+            //console.log("Button Pressed")
+            props.navigation.navigate('Box') // string passed is same as from home screen route names        
+          }}
+        />
+
+
+
 
         <TouchableOpacity   // Advance features than simple button !
           onPress={()=> props.navigation.navigate('List')}

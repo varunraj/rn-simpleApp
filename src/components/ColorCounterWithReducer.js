@@ -13,7 +13,7 @@ const ColorCounter = ({color, dispatch, value}) =>{
                 title={`Increase ${color}`}
                 onPress={()=>{
                     if (value + COLOR_INCREMENT < 255)
-                        dispatch({colorToChange:color, amount:COLOR_INCREMENT})
+                        dispatch({type:`change_${color}`, payload:COLOR_INCREMENT})
                     }
                 }
             />
@@ -21,7 +21,7 @@ const ColorCounter = ({color, dispatch, value}) =>{
                 title={`Decrease ${color}`}
                 onPress={()=>{
                     if (value - COLOR_INCREMENT > 0) // dont set negative value
-                       dispatch({colorToChange:color, amount:-COLOR_INCREMENT})
+                       dispatch({type:`change_${color}`, payload:-COLOR_INCREMENT})
                     }
                 }
             />
