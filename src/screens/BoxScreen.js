@@ -41,6 +41,11 @@ import { Text, View, StyleSheet } from 'react-native';
 // this may appear similar to margin. but the difference is that it is applied after screen is rendered
 // top=10 on child 2 will push child2 down on top of child 3 and it will overlap. It wont move child3 down to accomodate child 2
 
+// ONE CHILD FILL ENTIRE SCREEN
+// set poistion of child2 as absolute and then set top, bottom, left and right to 0.
+// we can achive the same using ...StyleSheet.absoluteFillObject also.
+
+
 const BoxScreen = ()=>{
     return <View style={styles.viewStyle}>
         <Text style={styles.text1Style}>Child 1</Text>
@@ -70,9 +75,10 @@ const styles = StyleSheet.create({
     text2Style:{
         borderWidth:3,
         borderColor:'red',
+        ...StyleSheet.absoluteFillObject
         //alignSelf:'center' // apply moving to center only to child 2
         //position:'absolute',
-        top:10
+        //top:10
         //flex:1
         //margin:10
         
